@@ -1,0 +1,37 @@
+= simple_form_for @condition do |f|
+  .row
+    .col-sm-6 = f.input :source, label: 'Sàn giao dịch',
+      collection: { 'Bittrex' => 'bittrex',
+        'Coinbase' => 'coinbase',
+        'Gdax' => 'gdax',
+        'HitBTC' => 'hitbtc',
+        'Poloniex' => 'poloniex',
+        'Cryptopia' => 'cryptopia'  },
+      input_html: { onchange: "window.update_coin_selection()" }
+    .col-sm-6 = f.input :coin, as: :select,
+      input_html: { onchange: "window.update_live_price()", class: "selectpicker", "data-live-search" => "true", "data-style" => "btn-info", "data-initial-value" => f.object.coin }
+
+
+  .form-group.row
+    .col-md-12
+      label.control-label
+    - Condition.currencies.keys.each do |currency|
+      .col-sm-4
+        = f.radio_button :currency, currency, class: "js-icheck"
+        strong<> = currency.upcase
+        br
+        .js-live-price.hidden
+          span class="js-#{currency}-price" style="margin-left: 24px"
+
+  .row
+    .col-sm-6
+      = f.input :operation, label: 'Lựa chọn loại cảnh báo',
+        collection: [ [ 'Giá coin giảm dưới', 'less_than_or_equal' ],
+          [ 'Giá coin tăng vượt', 'greater_than_or_equal' ]], required: true
+    .col-sm-6 = f.input :value, required: true
+
+  a "Cần 10 credits để gửi tin nhắn"
+  .hr-line-dashed
+
+  .text-center
+    = f.submit 'Update event', class: 'btn btn-primary'

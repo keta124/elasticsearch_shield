@@ -1,0 +1,26 @@
+.row
+  p &nbsp;
+  .col-md-12
+    .tabs-container
+      p Nạp thẻ 10.000 => 100 credits, 20.000 => 200 credits
+      p Chấp nhận thẻ cào 3 nhà mạng từ 10.000 đến 500.000
+      p Mỗi tin nhắn thực hiện sẽ trừ 10 credits
+      ul.nav.nav-tabs
+        li.active
+          a data-toggle="tab" aria-expanded="true" Nhập thông tin thẻ cào
+      .tab-content
+        #tab-card.tab-pane.active
+          a
+            = params["notice"]
+          .panel-body
+            = form_tag do
+              .form-group
+                label.control-label Mã thẻ
+                = text_field_tag :pin, nil, class: 'form-control', required: true
+              .form-group
+                label.control-label Serial
+                = text_field_tag :serial, nil, class: 'form-control', required: true
+              .form-group
+                = select_tag :card_type, options_for_select([[ "Viettel", 1 ], ["Mobiphone", 2], ["Vinaphone", 3]]), required: true
+              .form-group
+                = submit_tag 'Nạp thẻ', class: 'btn btn-primary'

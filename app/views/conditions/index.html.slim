@@ -1,0 +1,72 @@
+.row
+  p &nbsp;
+  .col-md-12
+    p
+      = link_to 'Tạo cảnh báo mới', new_condition_path, class: 'btn btn-primary'
+    .ibox
+      .tabs-container
+        ul.nav.nav-tabs
+          li.active
+            a data-toggle="tab" href="#tab-active" aria-expanded="true" Cảnh báo đang chạy
+          li
+            a data-toggle="tab" href="#tab-inactive" aria-expanded="false" Cảnh báo đã thực hiện
+          li
+            a data-toggle="tab" href="#tab-sendsms" aria-expanded="false" SMS đã gửi
+        .tab-content
+          #tab-active.tab-pane.active
+            .ibox-content
+              table.table.table-striped.tabled-hovered
+                thead
+                  tr
+                    th Coin
+                    th Condition
+                    th Active
+                    th Actions
+                tbody
+                  - @conditions_active.each do |condition|
+                    tr
+                      td style="vertical-align: middle;"
+                        | #{condition.source.titleize} #{condition.coin}
+                      td style="vertical-align: middle;" = format_condition_value(condition)
+                      td style="vertical-align: middle;" = condition.active
+                      td
+                        = link_to 'edit', edit_condition_path(condition), class: 'btn btn-success btn-sm'
+                        span<>
+                        = link_to 'delete', condition_path(condition), class: 'btn btn-danger btn-sm',
+                          method: :delete, data: { confirm: 'Are you sure?' }
+          #tab-inactive.tab-pane
+            .ibox-content
+              table.table.table-striped.tabled-hovered
+                thead
+                  tr
+                    th Coin
+                    th Condition
+                    th Active
+                    th Actions
+                tbody
+                  - @conditions_inactive.each do |condition|
+                    tr
+                      td style="vertical-align: middle;"
+                        | #{condition.source.titleize} #{condition.coin}
+                      td style="vertical-align: middle;" = format_condition_value(condition)
+                      td style="vertical-align: middle;" = condition.active
+                      td
+                        = link_to 'edit', edit_condition_path(condition), class: 'btn btn-success btn-sm'
+                        span<>
+                        = link_to 'delete', condition_path(condition), class: 'btn btn-danger btn-sm',
+                          method: :delete, data: { confirm: 'Are you sure?' }
+          #tab-sendsms.tab-pane
+            .ibox-content
+              table.table.table-striped.tabled-hovered
+                thead
+                  tr
+                    th SĐT nhận
+                    th Nội dung
+                    th Time
+                tbody
+                  - @sms.each do |sms|
+                    tr
+                      td style="vertical-align: middle;"
+                        | #{sms.to_number.titleize}
+                      td style="vertical-align: middle;" = sms.content
+                      td style="vertical-align: middle;" = sms.created_at

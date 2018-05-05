@@ -1,0 +1,13 @@
+@import "landing/bootstrap.min";
+@import "font-awesome";
+@import "landing/owl.carousel";
+@import "landing/owl.theme";
+@import "landing/owl.transitions";
+@import "landing/style";
+
+/* Background Images */
+.bg-img-1 {
+  background: asset-url("bg.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+}

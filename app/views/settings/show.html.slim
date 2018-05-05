@@ -1,0 +1,33 @@
+.row
+  .col-md-12
+    .tabs-container
+      ul.nav.nav-tabs
+        li.active
+          a data-toggle="tab" href="#tab-email" aria-expanded="true" Update Email & Phone
+        li
+          a data-toggle="tab" href="#tab-password" aria-expanded="false" Change Password
+
+      .tab-content
+        #tab-email.tab-pane.active
+          .panel-body
+            = form_tag '/settings/update_email', method: :patch do
+              .form-group
+                label.control-label Email
+                = email_field_tag :email, current_user.email, class: 'form-control'
+              .form-group
+                label.control-label Phone Number
+                = text_field_tag :phone, current_user.phone, class: 'form-control'
+              .form-group
+                = submit_tag 'Update', class: 'btn btn-primary'
+        #tab-password.tab-pane
+          .panel-body
+            = form_tag '/settings/update_password', method: :patch do
+              .form-group
+                label.control-label Your current password
+                = password_field_tag :current_password, nil, class: 'form-control'
+                label.control-label Your new password
+                = password_field_tag :new_password, nil, class: 'form-control'
+                label.control-label Please confirm new password
+                = password_field_tag :new_password_confirmation, nil, class: 'form-control'
+              .form-group
+                = submit_tag 'Update password', class: 'btn btn-primary'

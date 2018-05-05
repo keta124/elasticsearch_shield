@@ -1,0 +1,631 @@
+# Logfile created on 2018-01-22 16:39:30 +0700 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-01-22 16:39:30 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [547c2f0e] Running [ -d ~/.rvm ] on 103.216.122.109
+ DEBUG [547c2f0e] Command: [ -d ~/.rvm ]
+ DEBUG [547c2f0e] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [d9bf7116] Running ~/.rvm/bin/rvm version on 103.216.122.109
+ DEBUG [d9bf7116] Command: ~/.rvm/bin/rvm version
+ DEBUG [d9bf7116] 	rvm 1.29.3 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [d9bf7116] Finished in 0.818 seconds with exit status 0 (successful).
+ DEBUG [30eab2f0] Running ~/.rvm/bin/rvm current on 103.216.122.109
+ DEBUG [30eab2f0] Command: ~/.rvm/bin/rvm current
+ DEBUG [30eab2f0] 	ruby-2.3.4
+ DEBUG [30eab2f0] Finished in 0.748 seconds with exit status 0 (successful).
+ DEBUG [34da3c3d] Running ~/.rvm/bin/rvm default do ruby --version on 103.216.122.109
+ DEBUG [34da3c3d] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [34da3c3d] 	ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-linux]
+ DEBUG [34da3c3d] Finished in 1.268 seconds with exit status 0 (successful).
+  INFO [1aa2951b] Running /usr/bin/env mkdir -p /tmp on 103.216.122.109
+ DEBUG [1aa2951b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1aa2951b] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-coin-notification-production-crazydiamond.sh 0.0%
+  INFO Uploading /tmp/git-ssh-coin-notification-production-crazydiamond.sh 100.0%
+  INFO [2659e747] Running /usr/bin/env chmod 700 /tmp/git-ssh-coin-notification-production-crazydiamond.sh on 103.216.122.109
+ DEBUG [2659e747] Command: /usr/bin/env chmod 700 /tmp/git-ssh-coin-notification-production-crazydiamond.sh
+  INFO [2659e747] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [4d7e1058] Running /usr/bin/env git ls-remote git@github.com:nguyenducgiang/coin-notification.git HEAD on 103.216.122.109
+ DEBUG [4d7e1058] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git ls-remote git@github.com:nguyenducgiang/coin-notification.git HEAD )
+ DEBUG [4d7e1058] 	2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa	HEAD
+  INFO [4d7e1058] Finished in 3.190 seconds with exit status 0 (successful).
+  INFO [2254f596] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared /home/deploy/apps/coin-notification/releases on 103.216.122.109
+ DEBUG [2254f596] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared /home/deploy/apps/coin-notification/releases
+  INFO [2254f596] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [731c9425] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared/log /home/deploy/apps/coin-notification/shared/tmp/pids /home/deploy/apps/coin-notification/shared/tmp/cache /home/deploy/apps/coin-notification/shared/tmp/sockets /home/deploy/apps/coin-notification/shared/vendor/bundle /home/deploy/apps/coin-notification/shared/public/system /home/deploy/apps/coin-notification/shared/public/assets on 103.216.122.109
+ DEBUG [731c9425] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared/log /home/deploy/apps/coin-notification/shared/tmp/pids /home/deploy/apps/coin-notification/shared/tmp/cache /home/deploy/apps/coin-notification/shared/tmp/sockets /home/deploy/apps/coin-notification/shared/vendor/bundle /home/deploy/apps/coin-notification/shared/public/system /home/deploy/apps/coin-notification/shared/public/assets
+  INFO [731c9425] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [60a861c4] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared/config on 103.216.122.109
+ DEBUG [60a861c4] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared/config
+  INFO [60a861c4] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [e5fd1d97] Running [ -f /home/deploy/apps/coin-notification/shared/config/database.yml ] on 103.216.122.109
+ DEBUG [e5fd1d97] Command: [ -f /home/deploy/apps/coin-notification/shared/config/database.yml ]
+ DEBUG [e5fd1d97] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [76f95bd9] Running [ -f /home/deploy/apps/coin-notification/shared/puma.rb ] on 103.216.122.109
+ DEBUG [76f95bd9] Command: [ -f /home/deploy/apps/coin-notification/shared/puma.rb ]
+ DEBUG [76f95bd9] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [da26974a] Running [ -f /home/deploy/apps/coin-notification/current/REVISION ] on 103.216.122.109
+ DEBUG [da26974a] Command: [ -f /home/deploy/apps/coin-notification/current/REVISION ]
+ DEBUG [da26974a] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [164ffce6] Running /usr/bin/env cat /home/deploy/apps/coin-notification/current/REVISION 2>/dev/null on 103.216.122.109
+ DEBUG [164ffce6] Command: /usr/bin/env cat /home/deploy/apps/coin-notification/current/REVISION 2>/dev/null
+ DEBUG [164ffce6] 	2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa
+ DEBUG [164ffce6] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [0d54c884] Running if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi on 103.216.122.109
+ DEBUG [0d54c884] Command: if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [0d54c884] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [b2fd839b] Running [ -d /home/deploy/apps/coin-notification/current ] on 103.216.122.109
+ DEBUG [b2fd839b] Command: [ -d /home/deploy/apps/coin-notification/current ]
+ DEBUG [b2fd839b] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [0ed6b51c] Running if test ! -d /home/deploy/apps/coin-notification/current; then echo "Directory does not exist '/home/deploy/apps/coin-notification/current'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [0ed6b51c] Command: if test ! -d /home/deploy/apps/coin-notification/current; then echo "Directory does not exist '/home/deploy/apps/coin-notification/current'" 1>&2; false; fi
+ DEBUG [0ed6b51c] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [8eeae210] Running /usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ] on 103.216.122.109
+ DEBUG [8eeae210] Command: cd /home/deploy/apps/coin-notification/current && sudo -u deploy -- sh -c '/usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ]'
+ DEBUG [8eeae210] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [7cd0dcb3] Running /usr/bin/env kill -0 $( cat /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ) on 103.216.122.109
+ DEBUG [7cd0dcb3] Command: cd /home/deploy/apps/coin-notification/current && sudo -u deploy -- sh -c '/usr/bin/env kill -0 $( cat /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid )'
+ DEBUG [7cd0dcb3] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [d89086c9] Running ~/.rvm/bin/rvm default do bundle exec sidekiqctl quiet /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid on 103.216.122.109
+ DEBUG [d89086c9] Command: cd /home/deploy/apps/coin-notification/current && sudo -u deploy -- sh -c '~/.rvm/bin/rvm default do bundle exec sidekiqctl quiet /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid'
+  INFO [d89086c9] Finished in 2.083 seconds with exit status 0 (successful).
+ DEBUG [31a976ed] Running [ -f /home/deploy/apps/coin-notification/repo/HEAD ] on 103.216.122.109
+ DEBUG [31a976ed] Command: [ -f /home/deploy/apps/coin-notification/repo/HEAD ]
+ DEBUG [31a976ed] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/coin-notification/repo
+ DEBUG [eee24a8d] Running if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [eee24a8d] Command: if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi
+ DEBUG [eee24a8d] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [4fa8933f] Running /usr/bin/env git remote set-url origin git@github.com:nguyenducgiang/coin-notification.git on 103.216.122.109
+ DEBUG [4fa8933f] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git remote set-url origin git@github.com:nguyenducgiang/coin-notification.git )
+  INFO [4fa8933f] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [e59bc6d5] Running /usr/bin/env git remote update --prune on 103.216.122.109
+ DEBUG [e59bc6d5] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e59bc6d5] 	Fetching origin
+  INFO [e59bc6d5] Finished in 3.622 seconds with exit status 0 (successful).
+ DEBUG [05bd275f] Running if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [05bd275f] Command: if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi
+ DEBUG [05bd275f] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [c6fa3b66] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122093940 on 103.216.122.109
+ DEBUG [c6fa3b66] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122093940 )
+  INFO [c6fa3b66] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [66178ad1] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/coin-notification/releases/20180122093940 on 103.216.122.109
+ DEBUG [66178ad1] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/coin-notification/releases/20180122093940 )
+  INFO [66178ad1] Finished in 1.019 seconds with exit status 0 (successful).
+ DEBUG [b46edad8] Running if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [b46edad8] Command: if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi
+ DEBUG [b46edad8] Finished in 0.046 seconds with exit status 0 (successful).
+ DEBUG [acdccf05] Running /usr/bin/env git rev-list --max-count=1 master on 103.216.122.109
+ DEBUG [acdccf05] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [acdccf05] 	2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa
+ DEBUG [acdccf05] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [893f69d9] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [893f69d9] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi
+ DEBUG [893f69d9] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [8f5411b1] Running /usr/bin/env echo "2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa" >> REVISION on 103.216.122.109
+ DEBUG [8f5411b1] Command: cd /home/deploy/apps/coin-notification/releases/20180122093940 && /usr/bin/env echo "2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa" >> REVISION
+  INFO [8f5411b1] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [d7da23bd] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122093940/config on 103.216.122.109
+ DEBUG [d7da23bd] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122093940/config
+  INFO [d7da23bd] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [8107e2c2] Running [ -L /home/deploy/apps/coin-notification/releases/20180122093940/config/database.yml ] on 103.216.122.109
+ DEBUG [8107e2c2] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122093940/config/database.yml ]
+ DEBUG [8107e2c2] Finished in 0.044 seconds with exit status 1 (failed).
+ DEBUG [22dbbf0f] Running [ -f /home/deploy/apps/coin-notification/releases/20180122093940/config/database.yml ] on 103.216.122.109
+ DEBUG [22dbbf0f] Command: [ -f /home/deploy/apps/coin-notification/releases/20180122093940/config/database.yml ]
+ DEBUG [22dbbf0f] Finished in 0.281 seconds with exit status 1 (failed).
+  INFO [683f6bd8] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/config/database.yml /home/deploy/apps/coin-notification/releases/20180122093940/config/database.yml on 103.216.122.109
+ DEBUG [683f6bd8] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/config/database.yml /home/deploy/apps/coin-notification/releases/20180122093940/config/database.yml
+  INFO [683f6bd8] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [693cd73b] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122093940 /home/deploy/apps/coin-notification/releases/20180122093940/tmp /home/deploy/apps/coin-notification/releases/20180122093940/vendor /home/deploy/apps/coin-notification/releases/20180122093940/public on 103.216.122.109
+ DEBUG [693cd73b] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122093940 /home/deploy/apps/coin-notification/releases/20180122093940/tmp /home/deploy/apps/coin-notification/releases/20180122093940/vendor /home/deploy/apps/coin-notification/releases/20180122093940/public
+  INFO [693cd73b] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [f60c42b1] Running [ -L /home/deploy/apps/coin-notification/releases/20180122093940/log ] on 103.216.122.109
+ DEBUG [f60c42b1] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122093940/log ]
+ DEBUG [f60c42b1] Finished in 0.051 seconds with exit status 1 (failed).
+ DEBUG [06b54893] Running [ -d /home/deploy/apps/coin-notification/releases/20180122093940/log ] on 103.216.122.109
+ DEBUG [06b54893] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122093940/log ]
+ DEBUG [06b54893] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [a68d0bd0] Running /usr/bin/env rm -rf /home/deploy/apps/coin-notification/releases/20180122093940/log on 103.216.122.109
+ DEBUG [a68d0bd0] Command: /usr/bin/env rm -rf /home/deploy/apps/coin-notification/releases/20180122093940/log
+  INFO [a68d0bd0] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [1618c325] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/log /home/deploy/apps/coin-notification/releases/20180122093940/log on 103.216.122.109
+ DEBUG [1618c325] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/log /home/deploy/apps/coin-notification/releases/20180122093940/log
+  INFO [1618c325] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [fb716023] Running [ -L /home/deploy/apps/coin-notification/releases/20180122093940/tmp/pids ] on 103.216.122.109
+ DEBUG [fb716023] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122093940/tmp/pids ]
+ DEBUG [fb716023] Finished in 0.047 seconds with exit status 1 (failed).
+ DEBUG [1abd7ba3] Running [ -d /home/deploy/apps/coin-notification/releases/20180122093940/tmp/pids ] on 103.216.122.109
+ DEBUG [1abd7ba3] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122093940/tmp/pids ]
+ DEBUG [1abd7ba3] Finished in 0.048 seconds with exit status 1 (failed).
+  INFO [2271438d] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/pids /home/deploy/apps/coin-notification/releases/20180122093940/tmp/pids on 103.216.122.109
+ DEBUG [2271438d] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/pids /home/deploy/apps/coin-notification/releases/20180122093940/tmp/pids
+  INFO [2271438d] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [27add7be] Running [ -L /home/deploy/apps/coin-notification/releases/20180122093940/tmp/cache ] on 103.216.122.109
+ DEBUG [27add7be] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122093940/tmp/cache ]
+ DEBUG [27add7be] Finished in 0.049 seconds with exit status 1 (failed).
+ DEBUG [392d1d9d] Running [ -d /home/deploy/apps/coin-notification/releases/20180122093940/tmp/cache ] on 103.216.122.109
+ DEBUG [392d1d9d] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122093940/tmp/cache ]
+ DEBUG [392d1d9d] Finished in 0.045 seconds with exit status 1 (failed).
+  INFO [37cf6f85] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/cache /home/deploy/apps/coin-notification/releases/20180122093940/tmp/cache on 103.216.122.109
+ DEBUG [37cf6f85] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/cache /home/deploy/apps/coin-notification/releases/20180122093940/tmp/cache
+  INFO [37cf6f85] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [72106399] Running [ -L /home/deploy/apps/coin-notification/releases/20180122093940/tmp/sockets ] on 103.216.122.109
+ DEBUG [72106399] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122093940/tmp/sockets ]
+ DEBUG [72106399] Finished in 0.044 seconds with exit status 1 (failed).
+ DEBUG [6878c4c3] Running [ -d /home/deploy/apps/coin-notification/releases/20180122093940/tmp/sockets ] on 103.216.122.109
+ DEBUG [6878c4c3] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122093940/tmp/sockets ]
+ DEBUG [6878c4c3] Finished in 0.045 seconds with exit status 1 (failed).
+  INFO [9de6fb14] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/sockets /home/deploy/apps/coin-notification/releases/20180122093940/tmp/sockets on 103.216.122.109
+ DEBUG [9de6fb14] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/sockets /home/deploy/apps/coin-notification/releases/20180122093940/tmp/sockets
+  INFO [9de6fb14] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [3b0bbcd5] Running [ -L /home/deploy/apps/coin-notification/releases/20180122093940/vendor/bundle ] on 103.216.122.109
+ DEBUG [3b0bbcd5] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122093940/vendor/bundle ]
+ DEBUG [3b0bbcd5] Finished in 0.045 seconds with exit status 1 (failed).
+ DEBUG [8faeeca3] Running [ -d /home/deploy/apps/coin-notification/releases/20180122093940/vendor/bundle ] on 103.216.122.109
+ DEBUG [8faeeca3] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122093940/vendor/bundle ]
+ DEBUG [8faeeca3] Finished in 0.047 seconds with exit status 1 (failed).
+  INFO [3f3b67f2] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/vendor/bundle /home/deploy/apps/coin-notification/releases/20180122093940/vendor/bundle on 103.216.122.109
+ DEBUG [3f3b67f2] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/vendor/bundle /home/deploy/apps/coin-notification/releases/20180122093940/vendor/bundle
+  INFO [3f3b67f2] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [3479a003] Running [ -L /home/deploy/apps/coin-notification/releases/20180122093940/public/system ] on 103.216.122.109
+ DEBUG [3479a003] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122093940/public/system ]
+ DEBUG [3479a003] Finished in 0.044 seconds with exit status 1 (failed).
+ DEBUG [a29e1527] Running [ -d /home/deploy/apps/coin-notification/releases/20180122093940/public/system ] on 103.216.122.109
+ DEBUG [a29e1527] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122093940/public/system ]
+ DEBUG [a29e1527] Finished in 0.049 seconds with exit status 1 (failed).
+  INFO [7a9644e8] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/public/system /home/deploy/apps/coin-notification/releases/20180122093940/public/system on 103.216.122.109
+ DEBUG [7a9644e8] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/public/system /home/deploy/apps/coin-notification/releases/20180122093940/public/system
+  INFO [7a9644e8] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [1f8c8864] Running [ -L /home/deploy/apps/coin-notification/releases/20180122093940/public/assets ] on 103.216.122.109
+ DEBUG [1f8c8864] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122093940/public/assets ]
+ DEBUG [1f8c8864] Finished in 0.047 seconds with exit status 1 (failed).
+ DEBUG [8c4bc75a] Running [ -d /home/deploy/apps/coin-notification/releases/20180122093940/public/assets ] on 103.216.122.109
+ DEBUG [8c4bc75a] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122093940/public/assets ]
+ DEBUG [8c4bc75a] Finished in 0.050 seconds with exit status 1 (failed).
+  INFO [c4bc730e] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/public/assets /home/deploy/apps/coin-notification/releases/20180122093940/public/assets on 103.216.122.109
+ DEBUG [c4bc730e] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/public/assets /home/deploy/apps/coin-notification/releases/20180122093940/public/assets
+  INFO [c4bc730e] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [3e768b56] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [3e768b56] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi
+ DEBUG [3e768b56] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [2504aeea] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/coin-notification/shared/bundle on 103.216.122.109
+ DEBUG [2504aeea] Command: cd /home/deploy/apps/coin-notification/releases/20180122093940 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/coin-notification/shared/bundle
+ DEBUG [2504aeea] 	https://github.com/seuros/capistrano-sidekiq.git (at master@339c42e) is not yet
+checked out. Run `bundle install` first.
+ DEBUG [2504aeea] Finished in 1.970 seconds with exit status 11 (failed).
+  INFO [81abccb2] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/coin-notification/shared/bundle --without development test --deployment --quiet on 103.216.122.109
+ DEBUG [81abccb2] Command: cd /home/deploy/apps/coin-notification/releases/20180122093940 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/coin-notification/shared/bundle --without development test --deployment --quiet
+  INFO [81abccb2] Finished in 3.936 seconds with exit status 0 (successful).
+ DEBUG [afd93b3c] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [afd93b3c] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi
+ DEBUG [afd93b3c] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [fa6dfada] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 103.216.122.109
+ DEBUG [fa6dfada] Command: cd /home/deploy/apps/coin-notification/releases/20180122093940 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [fa6dfada] 	Yarn executable was not detected in the system.
+Download Yarn at https://yarnpkg.com/en/docs/install
+  INFO [fa6dfada] Finished in 9.981 seconds with exit status 0 (successful).
+ DEBUG [45211c9e] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [45211c9e] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi
+ DEBUG [45211c9e] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [9a589df8] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122093940/assets_manifest_backup on 103.216.122.109
+ DEBUG [9a589df8] Command: cd /home/deploy/apps/coin-notification/releases/20180122093940 && /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122093940/assets_manifest_backup
+  INFO [9a589df8] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [293c6333] Running /usr/bin/env ls /home/deploy/apps/coin-notification/releases/20180122093940/public/assets/.sprockets-manifest* on 103.216.122.109
+ DEBUG [293c6333] Command: cd /home/deploy/apps/coin-notification/releases/20180122093940 && /usr/bin/env ls /home/deploy/apps/coin-notification/releases/20180122093940/public/assets/.sprockets-manifest*
+ DEBUG [293c6333] 	/home/deploy/apps/coin-notification/releases/20180122093940/public/assets/.sprockets-manifest-9fff6c1c9a5c8123be536b1e43d98348.json
+ DEBUG [293c6333] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [25f70c96] Running /usr/bin/env ls /home/deploy/apps/coin-notification/releases/20180122093940/public/assets/.sprockets-manifest* on 103.216.122.109
+ DEBUG [25f70c96] Command: cd /home/deploy/apps/coin-notification/releases/20180122093940 && /usr/bin/env ls /home/deploy/apps/coin-notification/releases/20180122093940/public/assets/.sprockets-manifest*
+ DEBUG [25f70c96] 	/home/deploy/apps/coin-notification/releases/20180122093940/public/assets/.sprockets-manifest-9fff6c1c9a5c8123be536b1e43d98348.json
+ DEBUG [25f70c96] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [f8303411] Running /usr/bin/env cp /home/deploy/apps/coin-notification/releases/20180122093940/public/assets/.sprockets-manifest-9fff6c1c9a5c8123be536b1e43d98348.json /home/deploy/apps/coin-notification/releases/20180122093940/assets_manifest_backup on 103.216.122.109
+ DEBUG [f8303411] Command: cd /home/deploy/apps/coin-notification/releases/20180122093940 && /usr/bin/env cp /home/deploy/apps/coin-notification/releases/20180122093940/public/assets/.sprockets-manifest-9fff6c1c9a5c8123be536b1e43d98348.json /home/deploy/apps/coin-notification/releases/20180122093940/assets_manifest_backup
+  INFO [f8303411] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [52ad664a] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [52ad664a] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122093940; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122093940'" 1>&2; false; fi
+ DEBUG [52ad664a] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [032b982e] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 103.216.122.109
+ DEBUG [032b982e] Command: cd /home/deploy/apps/coin-notification/releases/20180122093940 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [032b982e] 	rake aborted!
+ActiveRecord::NoDatabaseError: FATAL:  database "coin_production" does not exist
+ DEBUG [032b982e] 	/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:705:in `rescue in connect'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:701:in `connect'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_handling.rb:88:in `connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/schema_migration.rb:20:in `table_exists?'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/schema_migration.rb:24:in `create_table'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/migration.rb:1125:in `initialize'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/migration.rb:1007:in `new'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/migration.rb:1007:in `up'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/migration.rb:985:in `migrate'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+/home/deploy/.rvm/gems/ruby-2.3.4/bin/bundle:23:in `load'
+/home/deploy/.rvm/gems/ruby-2.3.4/bin/bundle:23:in `<main>'
+/home/deploy/.rvm/gems/ruby-2.3.4/bin/ruby_executable_hooks:15:in `eval'
+/home/deploy/.rvm/gems/ruby-2.3.4/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [032b982e] 	PG::ConnectionBad: FATAL:  database "coin_production" does not exist
+ DEBUG [032b982e] 	/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/pg-0.21.0/lib/pg.rb:56:in `initialize'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/pg-0.21.0/lib/pg.rb:56:in `new'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/pg-0.21.0/lib/pg.rb:56:in `connect'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:701:in `connect'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/connection_handling.rb:88:in `connection'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/schema_migration.rb:20:in `table_exists?'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/schema_migration.rb:24:in `create_table'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/migration.rb:1125:in `initialize'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/migration.rb:1007:in `new'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/migration.rb:1007:in `up'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/migration.rb:985:in `migrate'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/activerecord-5.1.2/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/deploy/apps/coin-notification/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `load'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:75:in `kernel_load'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli/exec.rb:28:in `run'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli.rb:424:in `exec'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli.rb:27:in `dispatch'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/cli.rb:18:in `start'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/exe/bundle:30:in `block in <top (required)>'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+/home/deploy/.rvm/gems/ruby-2.3.4/gems/bundler-1.16.0/exe/bundle:22:in `<top (required)>'
+/home/deploy/.rvm/gems/ruby-2.3.4/bin/bundle:23:in `load'
+/home/deploy/.rvm/gems/ruby-2.3.4/bin/bundle:23:in `<main>'
+/home/deploy/.rvm/gems/ruby-2.3.4/bin/ruby_executable_hooks:15:in `eval'
+/home/deploy/.rvm/gems/ruby-2.3.4/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [032b982e] 	Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-01-22 16:49:01 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [01df0b53] Running [ -d ~/.rvm ] on 103.216.122.109
+ DEBUG [01df0b53] Command: [ -d ~/.rvm ]
+ DEBUG [01df0b53] Finished in 0.442 seconds with exit status 0 (successful).
+ DEBUG [9ae8aff8] Running ~/.rvm/bin/rvm version on 103.216.122.109
+ DEBUG [9ae8aff8] Command: ~/.rvm/bin/rvm version
+ DEBUG [9ae8aff8] 	rvm 1.29.3 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [9ae8aff8] Finished in 0.828 seconds with exit status 0 (successful).
+ DEBUG [91b7d267] Running ~/.rvm/bin/rvm current on 103.216.122.109
+ DEBUG [91b7d267] Command: ~/.rvm/bin/rvm current
+ DEBUG [91b7d267] 	ruby-2.3.4
+ DEBUG [91b7d267] Finished in 0.805 seconds with exit status 0 (successful).
+ DEBUG [dda21624] Running ~/.rvm/bin/rvm default do ruby --version on 103.216.122.109
+ DEBUG [dda21624] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [dda21624] 	ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-linux]
+ DEBUG [dda21624] Finished in 1.364 seconds with exit status 0 (successful).
+  INFO [045c6c2c] Running /usr/bin/env mkdir -p /tmp on 103.216.122.109
+ DEBUG [045c6c2c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [045c6c2c] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-coin-notification-production-crazydiamond.sh 0.0%
+  INFO Uploading /tmp/git-ssh-coin-notification-production-crazydiamond.sh 100.0%
+  INFO [e09f5d2b] Running /usr/bin/env chmod 700 /tmp/git-ssh-coin-notification-production-crazydiamond.sh on 103.216.122.109
+ DEBUG [e09f5d2b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-coin-notification-production-crazydiamond.sh
+  INFO [e09f5d2b] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [48bfb387] Running /usr/bin/env git ls-remote git@github.com:nguyenducgiang/coin-notification.git HEAD on 103.216.122.109
+ DEBUG [48bfb387] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git ls-remote git@github.com:nguyenducgiang/coin-notification.git HEAD )
+ DEBUG [48bfb387] 	2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa	HEAD
+  INFO [48bfb387] Finished in 3.576 seconds with exit status 0 (successful).
+  INFO [382c1c41] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared /home/deploy/apps/coin-notification/releases on 103.216.122.109
+ DEBUG [382c1c41] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared /home/deploy/apps/coin-notification/releases
+  INFO [382c1c41] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [5a16c1e6] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared/log /home/deploy/apps/coin-notification/shared/tmp/pids /home/deploy/apps/coin-notification/shared/tmp/cache /home/deploy/apps/coin-notification/shared/tmp/sockets /home/deploy/apps/coin-notification/shared/vendor/bundle /home/deploy/apps/coin-notification/shared/public/system /home/deploy/apps/coin-notification/shared/public/assets on 103.216.122.109
+ DEBUG [5a16c1e6] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared/log /home/deploy/apps/coin-notification/shared/tmp/pids /home/deploy/apps/coin-notification/shared/tmp/cache /home/deploy/apps/coin-notification/shared/tmp/sockets /home/deploy/apps/coin-notification/shared/vendor/bundle /home/deploy/apps/coin-notification/shared/public/system /home/deploy/apps/coin-notification/shared/public/assets
+  INFO [5a16c1e6] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [0311557d] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared/config on 103.216.122.109
+ DEBUG [0311557d] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/shared/config
+  INFO [0311557d] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [86450a45] Running [ -f /home/deploy/apps/coin-notification/shared/config/database.yml ] on 103.216.122.109
+ DEBUG [86450a45] Command: [ -f /home/deploy/apps/coin-notification/shared/config/database.yml ]
+ DEBUG [86450a45] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [02ed8ed9] Running [ -f /home/deploy/apps/coin-notification/shared/puma.rb ] on 103.216.122.109
+ DEBUG [02ed8ed9] Command: [ -f /home/deploy/apps/coin-notification/shared/puma.rb ]
+ DEBUG [02ed8ed9] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [27dc24a0] Running [ -f /home/deploy/apps/coin-notification/current/REVISION ] on 103.216.122.109
+ DEBUG [27dc24a0] Command: [ -f /home/deploy/apps/coin-notification/current/REVISION ]
+ DEBUG [27dc24a0] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [14f5c076] Running /usr/bin/env cat /home/deploy/apps/coin-notification/current/REVISION 2>/dev/null on 103.216.122.109
+ DEBUG [14f5c076] Command: /usr/bin/env cat /home/deploy/apps/coin-notification/current/REVISION 2>/dev/null
+ DEBUG [14f5c076] 	2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa
+ DEBUG [14f5c076] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [c19c6827] Running if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi on 103.216.122.109
+ DEBUG [c19c6827] Command: if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [c19c6827] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [9a9649c6] Running [ -d /home/deploy/apps/coin-notification/current ] on 103.216.122.109
+ DEBUG [9a9649c6] Command: [ -d /home/deploy/apps/coin-notification/current ]
+ DEBUG [9a9649c6] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [c52c1b5f] Running if test ! -d /home/deploy/apps/coin-notification/current; then echo "Directory does not exist '/home/deploy/apps/coin-notification/current'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [c52c1b5f] Command: if test ! -d /home/deploy/apps/coin-notification/current; then echo "Directory does not exist '/home/deploy/apps/coin-notification/current'" 1>&2; false; fi
+ DEBUG [c52c1b5f] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [eb31ae54] Running /usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ] on 103.216.122.109
+ DEBUG [eb31ae54] Command: cd /home/deploy/apps/coin-notification/current && sudo -u deploy -- sh -c '/usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ]'
+ DEBUG [eb31ae54] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [37550075] Running /usr/bin/env kill -0 $( cat /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ) on 103.216.122.109
+ DEBUG [37550075] Command: cd /home/deploy/apps/coin-notification/current && sudo -u deploy -- sh -c '/usr/bin/env kill -0 $( cat /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid )'
+ DEBUG [37550075] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [f2c75dcf] Running ~/.rvm/bin/rvm default do bundle exec sidekiqctl quiet /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid on 103.216.122.109
+ DEBUG [f2c75dcf] Command: cd /home/deploy/apps/coin-notification/current && sudo -u deploy -- sh -c '~/.rvm/bin/rvm default do bundle exec sidekiqctl quiet /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid'
+  INFO [f2c75dcf] Finished in 2.071 seconds with exit status 0 (successful).
+ DEBUG [e728b37e] Running [ -f /home/deploy/apps/coin-notification/repo/HEAD ] on 103.216.122.109
+ DEBUG [e728b37e] Command: [ -f /home/deploy/apps/coin-notification/repo/HEAD ]
+ DEBUG [e728b37e] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/coin-notification/repo
+ DEBUG [5168131a] Running if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [5168131a] Command: if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi
+ DEBUG [5168131a] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [244b5858] Running /usr/bin/env git remote set-url origin git@github.com:nguyenducgiang/coin-notification.git on 103.216.122.109
+ DEBUG [244b5858] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git remote set-url origin git@github.com:nguyenducgiang/coin-notification.git )
+  INFO [244b5858] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [e8293677] Running /usr/bin/env git remote update --prune on 103.216.122.109
+ DEBUG [e8293677] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e8293677] 	Fetching origin
+  INFO [e8293677] Finished in 3.483 seconds with exit status 0 (successful).
+ DEBUG [b16807ee] Running if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [b16807ee] Command: if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi
+ DEBUG [b16807ee] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [ce28bc1d] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122094911 on 103.216.122.109
+ DEBUG [ce28bc1d] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122094911 )
+  INFO [ce28bc1d] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [e8fc4732] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/coin-notification/releases/20180122094911 on 103.216.122.109
+ DEBUG [e8fc4732] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/coin-notification/releases/20180122094911 )
+  INFO [e8fc4732] Finished in 0.913 seconds with exit status 0 (successful).
+ DEBUG [0f7908f5] Running if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [0f7908f5] Command: if test ! -d /home/deploy/apps/coin-notification/repo; then echo "Directory does not exist '/home/deploy/apps/coin-notification/repo'" 1>&2; false; fi
+ DEBUG [0f7908f5] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [13c8f865] Running /usr/bin/env git rev-list --max-count=1 master on 103.216.122.109
+ DEBUG [13c8f865] Command: cd /home/deploy/apps/coin-notification/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-coin-notification-production-crazydiamond.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [13c8f865] 	2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa
+ DEBUG [13c8f865] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [5908784b] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [5908784b] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi
+ DEBUG [5908784b] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [87dba11e] Running /usr/bin/env echo "2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa" >> REVISION on 103.216.122.109
+ DEBUG [87dba11e] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && /usr/bin/env echo "2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa" >> REVISION
+  INFO [87dba11e] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [172a95e0] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122094911/config on 103.216.122.109
+ DEBUG [172a95e0] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122094911/config
+  INFO [172a95e0] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [0138a7b1] Running [ -L /home/deploy/apps/coin-notification/releases/20180122094911/config/database.yml ] on 103.216.122.109
+ DEBUG [0138a7b1] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122094911/config/database.yml ]
+ DEBUG [0138a7b1] Finished in 0.048 seconds with exit status 1 (failed).
+ DEBUG [a560b098] Running [ -f /home/deploy/apps/coin-notification/releases/20180122094911/config/database.yml ] on 103.216.122.109
+ DEBUG [a560b098] Command: [ -f /home/deploy/apps/coin-notification/releases/20180122094911/config/database.yml ]
+ DEBUG [a560b098] Finished in 0.045 seconds with exit status 1 (failed).
+  INFO [e506d558] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/config/database.yml /home/deploy/apps/coin-notification/releases/20180122094911/config/database.yml on 103.216.122.109
+ DEBUG [e506d558] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/config/database.yml /home/deploy/apps/coin-notification/releases/20180122094911/config/database.yml
+  INFO [e506d558] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [62498a66] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122094911 /home/deploy/apps/coin-notification/releases/20180122094911/tmp /home/deploy/apps/coin-notification/releases/20180122094911/vendor /home/deploy/apps/coin-notification/releases/20180122094911/public on 103.216.122.109
+ DEBUG [62498a66] Command: /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122094911 /home/deploy/apps/coin-notification/releases/20180122094911/tmp /home/deploy/apps/coin-notification/releases/20180122094911/vendor /home/deploy/apps/coin-notification/releases/20180122094911/public
+  INFO [62498a66] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [061c8b85] Running [ -L /home/deploy/apps/coin-notification/releases/20180122094911/log ] on 103.216.122.109
+ DEBUG [061c8b85] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122094911/log ]
+ DEBUG [061c8b85] Finished in 0.048 seconds with exit status 1 (failed).
+ DEBUG [40c40228] Running [ -d /home/deploy/apps/coin-notification/releases/20180122094911/log ] on 103.216.122.109
+ DEBUG [40c40228] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122094911/log ]
+ DEBUG [40c40228] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [5bf8d972] Running /usr/bin/env rm -rf /home/deploy/apps/coin-notification/releases/20180122094911/log on 103.216.122.109
+ DEBUG [5bf8d972] Command: /usr/bin/env rm -rf /home/deploy/apps/coin-notification/releases/20180122094911/log
+  INFO [5bf8d972] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [36356f04] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/log /home/deploy/apps/coin-notification/releases/20180122094911/log on 103.216.122.109
+ DEBUG [36356f04] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/log /home/deploy/apps/coin-notification/releases/20180122094911/log
+  INFO [36356f04] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [55b8376d] Running [ -L /home/deploy/apps/coin-notification/releases/20180122094911/tmp/pids ] on 103.216.122.109
+ DEBUG [55b8376d] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122094911/tmp/pids ]
+ DEBUG [55b8376d] Finished in 0.047 seconds with exit status 1 (failed).
+ DEBUG [b8a76929] Running [ -d /home/deploy/apps/coin-notification/releases/20180122094911/tmp/pids ] on 103.216.122.109
+ DEBUG [b8a76929] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122094911/tmp/pids ]
+ DEBUG [b8a76929] Finished in 0.046 seconds with exit status 1 (failed).
+  INFO [f963f404] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/pids /home/deploy/apps/coin-notification/releases/20180122094911/tmp/pids on 103.216.122.109
+ DEBUG [f963f404] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/pids /home/deploy/apps/coin-notification/releases/20180122094911/tmp/pids
+  INFO [f963f404] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [330e1d79] Running [ -L /home/deploy/apps/coin-notification/releases/20180122094911/tmp/cache ] on 103.216.122.109
+ DEBUG [330e1d79] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122094911/tmp/cache ]
+ DEBUG [330e1d79] Finished in 0.055 seconds with exit status 1 (failed).
+ DEBUG [358efa4c] Running [ -d /home/deploy/apps/coin-notification/releases/20180122094911/tmp/cache ] on 103.216.122.109
+ DEBUG [358efa4c] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122094911/tmp/cache ]
+ DEBUG [358efa4c] Finished in 0.049 seconds with exit status 1 (failed).
+  INFO [82b1dab5] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/cache /home/deploy/apps/coin-notification/releases/20180122094911/tmp/cache on 103.216.122.109
+ DEBUG [82b1dab5] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/cache /home/deploy/apps/coin-notification/releases/20180122094911/tmp/cache
+  INFO [82b1dab5] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [a9ae3772] Running [ -L /home/deploy/apps/coin-notification/releases/20180122094911/tmp/sockets ] on 103.216.122.109
+ DEBUG [a9ae3772] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122094911/tmp/sockets ]
+ DEBUG [a9ae3772] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [a9487e22] Running [ -d /home/deploy/apps/coin-notification/releases/20180122094911/tmp/sockets ] on 103.216.122.109
+ DEBUG [a9487e22] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122094911/tmp/sockets ]
+ DEBUG [a9487e22] Finished in 0.045 seconds with exit status 1 (failed).
+  INFO [b2af5289] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/sockets /home/deploy/apps/coin-notification/releases/20180122094911/tmp/sockets on 103.216.122.109
+ DEBUG [b2af5289] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/tmp/sockets /home/deploy/apps/coin-notification/releases/20180122094911/tmp/sockets
+  INFO [b2af5289] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [7950566f] Running [ -L /home/deploy/apps/coin-notification/releases/20180122094911/vendor/bundle ] on 103.216.122.109
+ DEBUG [7950566f] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122094911/vendor/bundle ]
+ DEBUG [7950566f] Finished in 0.045 seconds with exit status 1 (failed).
+ DEBUG [827a7824] Running [ -d /home/deploy/apps/coin-notification/releases/20180122094911/vendor/bundle ] on 103.216.122.109
+ DEBUG [827a7824] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122094911/vendor/bundle ]
+ DEBUG [827a7824] Finished in 0.046 seconds with exit status 1 (failed).
+  INFO [b160abda] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/vendor/bundle /home/deploy/apps/coin-notification/releases/20180122094911/vendor/bundle on 103.216.122.109
+ DEBUG [b160abda] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/vendor/bundle /home/deploy/apps/coin-notification/releases/20180122094911/vendor/bundle
+  INFO [b160abda] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [0b776330] Running [ -L /home/deploy/apps/coin-notification/releases/20180122094911/public/system ] on 103.216.122.109
+ DEBUG [0b776330] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122094911/public/system ]
+ DEBUG [0b776330] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [1aecb698] Running [ -d /home/deploy/apps/coin-notification/releases/20180122094911/public/system ] on 103.216.122.109
+ DEBUG [1aecb698] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122094911/public/system ]
+ DEBUG [1aecb698] Finished in 0.045 seconds with exit status 1 (failed).
+  INFO [863d168f] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/public/system /home/deploy/apps/coin-notification/releases/20180122094911/public/system on 103.216.122.109
+ DEBUG [863d168f] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/public/system /home/deploy/apps/coin-notification/releases/20180122094911/public/system
+  INFO [863d168f] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [9045f082] Running [ -L /home/deploy/apps/coin-notification/releases/20180122094911/public/assets ] on 103.216.122.109
+ DEBUG [9045f082] Command: [ -L /home/deploy/apps/coin-notification/releases/20180122094911/public/assets ]
+ DEBUG [9045f082] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [f7df97da] Running [ -d /home/deploy/apps/coin-notification/releases/20180122094911/public/assets ] on 103.216.122.109
+ DEBUG [f7df97da] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122094911/public/assets ]
+ DEBUG [f7df97da] Finished in 0.046 seconds with exit status 1 (failed).
+  INFO [da0e555a] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/public/assets /home/deploy/apps/coin-notification/releases/20180122094911/public/assets on 103.216.122.109
+ DEBUG [da0e555a] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/shared/public/assets /home/deploy/apps/coin-notification/releases/20180122094911/public/assets
+  INFO [da0e555a] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG [7691ee5b] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [7691ee5b] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi
+ DEBUG [7691ee5b] Finished in 0.046 seconds with exit status 0 (successful).
+ DEBUG [6a7d51e0] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/coin-notification/shared/bundle on 103.216.122.109
+ DEBUG [6a7d51e0] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/coin-notification/shared/bundle
+ DEBUG [6a7d51e0] 	https://github.com/seuros/capistrano-sidekiq.git (at master@339c42e) is not yet
+checked out. Run `bundle install` first.
+ DEBUG [6a7d51e0] Finished in 2.012 seconds with exit status 11 (failed).
+  INFO [28dd0309] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/coin-notification/shared/bundle --without development test --deployment --quiet on 103.216.122.109
+ DEBUG [28dd0309] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/coin-notification/shared/bundle --without development test --deployment --quiet
+  INFO [28dd0309] Finished in 4.082 seconds with exit status 0 (successful).
+ DEBUG [7db5428e] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [7db5428e] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi
+ DEBUG [7db5428e] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [6c1bcc32] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 103.216.122.109
+ DEBUG [6c1bcc32] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [6c1bcc32] 	Yarn executable was not detected in the system.
+Download Yarn at https://yarnpkg.com/en/docs/install
+  INFO [6c1bcc32] Finished in 9.944 seconds with exit status 0 (successful).
+ DEBUG [9ca7d6e4] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [9ca7d6e4] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi
+ DEBUG [9ca7d6e4] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [9d71b0fa] Running /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122094911/assets_manifest_backup on 103.216.122.109
+ DEBUG [9d71b0fa] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && /usr/bin/env mkdir -p /home/deploy/apps/coin-notification/releases/20180122094911/assets_manifest_backup
+  INFO [9d71b0fa] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [97e21c05] Running /usr/bin/env ls /home/deploy/apps/coin-notification/releases/20180122094911/public/assets/.sprockets-manifest* on 103.216.122.109
+ DEBUG [97e21c05] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && /usr/bin/env ls /home/deploy/apps/coin-notification/releases/20180122094911/public/assets/.sprockets-manifest*
+ DEBUG [97e21c05] 	/home/deploy/apps/coin-notification/releases/20180122094911/public/assets/.sprockets-manifest-9fff6c1c9a5c8123be536b1e43d98348.json
+ DEBUG [97e21c05] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [157d0b64] Running /usr/bin/env ls /home/deploy/apps/coin-notification/releases/20180122094911/public/assets/.sprockets-manifest* on 103.216.122.109
+ DEBUG [157d0b64] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && /usr/bin/env ls /home/deploy/apps/coin-notification/releases/20180122094911/public/assets/.sprockets-manifest*
+ DEBUG [157d0b64] 	/home/deploy/apps/coin-notification/releases/20180122094911/public/assets/.sprockets-manifest-9fff6c1c9a5c8123be536b1e43d98348.json
+ DEBUG [157d0b64] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [6b239b09] Running /usr/bin/env cp /home/deploy/apps/coin-notification/releases/20180122094911/public/assets/.sprockets-manifest-9fff6c1c9a5c8123be536b1e43d98348.json /home/deploy/apps/coin-notification/releases/20180122094911/assets_manifest_backup on 103.216.122.109
+ DEBUG [6b239b09] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && /usr/bin/env cp /home/deploy/apps/coin-notification/releases/20180122094911/public/assets/.sprockets-manifest-9fff6c1c9a5c8123be536b1e43d98348.json /home/deploy/apps/coin-notification/releases/20180122094911/assets_manifest_backup
+  INFO [6b239b09] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [0c51444b] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [0c51444b] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi
+ DEBUG [0c51444b] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [714824d3] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 103.216.122.109
+ DEBUG [714824d3] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [714824d3] Finished in 7.345 seconds with exit status 0 (successful).
+ DEBUG [aefdbe20] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [aefdbe20] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi
+ DEBUG [aefdbe20] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [a53261bb] Running ~/.rvm/bin/rvm default do bundle exec whenever --update-crontab coin-notification_production --set environment=production --roles=web,app,db on 103.216.122.109
+ DEBUG [a53261bb] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec whenever --update-crontab coin-notification_production --set environment=production --roles=web,app,db )
+ DEBUG [a53261bb] 	[write] crontab file updated
+  INFO [a53261bb] Finished in 2.179 seconds with exit status 0 (successful).
+ DEBUG [69012122] Running if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi on 103.216.122.109
+ DEBUG [69012122] Command: if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [69012122] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [3b07b3f0] Running [ -d /home/deploy/apps/coin-notification/releases/20180122094911 ] on 103.216.122.109
+ DEBUG [3b07b3f0] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122094911 ]
+ DEBUG [3b07b3f0] Finished in 0.046 seconds with exit status 0 (successful).
+ DEBUG [fd14c24c] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [fd14c24c] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi
+ DEBUG [fd14c24c] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [7f4c029c] Running /usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ] on 103.216.122.109
+ DEBUG [7f4c029c] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && sudo -u deploy -- sh -c '/usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ]'
+ DEBUG [7f4c029c] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [f7661418] Running /usr/bin/env kill -0 $( cat /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ) on 103.216.122.109
+ DEBUG [f7661418] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && sudo -u deploy -- sh -c '/usr/bin/env kill -0 $( cat /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid )'
+ DEBUG [f7661418] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [07146d9f] Running ~/.rvm/bin/rvm default do bundle exec sidekiqctl stop /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid 10 on 103.216.122.109
+ DEBUG [07146d9f] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && sudo -u deploy -- sh -c '~/.rvm/bin/rvm default do bundle exec sidekiqctl stop /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid 10'
+ DEBUG [07146d9f] 	Sidekiq shut down gracefully.
+  INFO [07146d9f] Finished in 10.027 seconds with exit status 0 (successful).
+  INFO [a6fe4add] Running /usr/bin/env ln -s /home/deploy/apps/coin-notification/releases/20180122094911 /home/deploy/apps/coin-notification/releases/current on 103.216.122.109
+ DEBUG [a6fe4add] Command: /usr/bin/env ln -s /home/deploy/apps/coin-notification/releases/20180122094911 /home/deploy/apps/coin-notification/releases/current
+  INFO [a6fe4add] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [1179ec51] Running /usr/bin/env mv /home/deploy/apps/coin-notification/releases/current /home/deploy/apps/coin-notification on 103.216.122.109
+ DEBUG [1179ec51] Command: /usr/bin/env mv /home/deploy/apps/coin-notification/releases/current /home/deploy/apps/coin-notification
+  INFO [1179ec51] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [e8667b0e] Running if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi on 103.216.122.109
+ DEBUG [e8667b0e] Command: if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [e8667b0e] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [025c5453] Running [ -d /home/deploy/apps/coin-notification/releases/20180122094911 ] on 103.216.122.109
+ DEBUG [025c5453] Command: [ -d /home/deploy/apps/coin-notification/releases/20180122094911 ]
+ DEBUG [025c5453] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [ac3cc9a1] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [ac3cc9a1] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi
+ DEBUG [ac3cc9a1] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [5c0e4676] Running /usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ] on 103.216.122.109
+ DEBUG [5c0e4676] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && sudo -u deploy -- sh -c '/usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ]'
+ DEBUG [5c0e4676] Finished in 0.081 seconds with exit status 1 (failed).
+ DEBUG [3b56a1d1] Running if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi on 103.216.122.109
+ DEBUG [3b56a1d1] Command: if ! sudo -u deploy whoami > /dev/null; then echo "You cannot switch to user 'deploy' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [3b56a1d1] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [106cd42c] Running if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [106cd42c] Command: if test ! -d /home/deploy/apps/coin-notification/releases/20180122094911; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases/20180122094911'" 1>&2; false; fi
+ DEBUG [106cd42c] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [d9e14d92] Running /usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ] on 103.216.122.109
+ DEBUG [d9e14d92] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && sudo -u deploy -- sh -c '/usr/bin/env [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid ]'
+ DEBUG [d9e14d92] Finished in 0.083 seconds with exit status 1 (failed).
+  INFO [5481d364] Running ~/.rvm/bin/rvm default do bundle exec sidekiq --index 0 --pidfile /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid --environment production --logfile /home/deploy/apps/coin-notification/shared/log/sidekiq.log --config config/sidekiq.yml --daemon on 103.216.122.109
+ DEBUG [5481d364] Command: cd /home/deploy/apps/coin-notification/releases/20180122094911 && sudo -u deploy -- sh -c '~/.rvm/bin/rvm default do bundle exec sidekiq --index 0 --pidfile /home/deploy/apps/coin-notification/shared/tmp/pids/sidekiq-0.pid --environment production --logfile /home/deploy/apps/coin-notification/shared/log/sidekiq.log --config config/sidekiq.yml --daemon'
+  INFO [5481d364] Finished in 2.516 seconds with exit status 0 (successful).
+ DEBUG [1306153c] Running /usr/bin/env ls -x /home/deploy/apps/coin-notification/releases on 103.216.122.109
+ DEBUG [1306153c] Command: /usr/bin/env ls -x /home/deploy/apps/coin-notification/releases
+ DEBUG [1306153c] 	20180104202722	20180104210038	20180104210158	20180104210638	20180105081719
+20180122093940	20180122094911
+ DEBUG [1306153c] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 7 deployed releases on 103.216.122.109
+  INFO [c4e64d6b] Running /usr/bin/env rm -rf /home/deploy/apps/coin-notification/releases/20180104202722 /home/deploy/apps/coin-notification/releases/20180104210038 on 103.216.122.109
+ DEBUG [c4e64d6b] Command: /usr/bin/env rm -rf /home/deploy/apps/coin-notification/releases/20180104202722 /home/deploy/apps/coin-notification/releases/20180104210038
+  INFO [c4e64d6b] Finished in 0.184 seconds with exit status 0 (successful).
+ DEBUG [836c059e] Running if test ! -d /home/deploy/apps/coin-notification/releases; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [836c059e] Command: if test ! -d /home/deploy/apps/coin-notification/releases; then echo "Directory does not exist '/home/deploy/apps/coin-notification/releases'" 1>&2; false; fi
+ DEBUG [836c059e] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [c7e3bc8c] Running /usr/bin/env echo "Branch master (at 2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa) deployed as release 20180122094911 by crazydiamond" >> /home/deploy/apps/coin-notification/revisions.log on 103.216.122.109
+ DEBUG [c7e3bc8c] Command: cd /home/deploy/apps/coin-notification/releases && /usr/bin/env echo "Branch master (at 2285bb2ce20e3ff21afc60e7cb6ee975c7cfe1aa) deployed as release 20180122094911 by crazydiamond" >> /home/deploy/apps/coin-notification/revisions.log
+  INFO [c7e3bc8c] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [6a512c19] Running if test ! -d /home/deploy/apps/coin-notification/current; then echo "Directory does not exist '/home/deploy/apps/coin-notification/current'" 1>&2; false; fi on 103.216.122.109
+ DEBUG [6a512c19] Command: if test ! -d /home/deploy/apps/coin-notification/current; then echo "Directory does not exist '/home/deploy/apps/coin-notification/current'" 1>&2; false; fi
+ DEBUG [6a512c19] Finished in 0.048 seconds with exit status 0 (successful).
+ DEBUG [bc3d9b1b] Running [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/puma.pid ] on 103.216.122.109
+ DEBUG [bc3d9b1b] Command: [ -f /home/deploy/apps/coin-notification/shared/tmp/pids/puma.pid ]
+ DEBUG [bc3d9b1b] Finished in 0.045 seconds with exit status 0 (successful).
+ DEBUG [30584222] Running /usr/bin/env kill -0 $( cat /home/deploy/apps/coin-notification/shared/tmp/pids/puma.pid ) on 103.216.122.109
+ DEBUG [30584222] Command: cd /home/deploy/apps/coin-notification/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/deploy/apps/coin-notification/shared/tmp/pids/puma.pid ) )
+ DEBUG [30584222] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [a59b5a69] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/apps/coin-notification/shared/tmp/pids/puma.state -F /home/deploy/apps/coin-notification/shared/puma.rb restart on 103.216.122.109
+ DEBUG [a59b5a69] Command: cd /home/deploy/apps/coin-notification/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/apps/coin-notification/shared/tmp/pids/puma.state -F /home/deploy/apps/coin-notification/shared/puma.rb restart )
+ DEBUG [a59b5a69] 	Command restart sent success
+  INFO [a59b5a69] Finished in 2.178 seconds with exit status 0 (successful).

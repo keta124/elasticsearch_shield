@@ -1,0 +1,28 @@
+.row
+  .col-sm-12
+    h4.page-title Bittrex
+
+.row
+  .col-12
+    .card-box.table-responsive
+          table#example.table.table-bordered.table-striped cellspacing="0" width="100%"
+            thead
+              th Name
+              th BTC last
+              th BTC high
+              th BTC low
+              th USD last
+              th USD high
+              th USD low
+              th VND last
+              th VND high
+              th VND low
+
+
+
+javascript:
+  $(document).ready(function() {
+    $('#example').dataTable( {
+      "ajax": "/bittrex.json"
+    });
+  });

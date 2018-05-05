@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Giá coin 24h</title>
+        <meta property="og:title" content="Giá coin 24h">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Giá coin 24h là nền tảng cảnh báo sự thay đổi của giá các loại tiền ảo từ nhiều sàn giao dịch khác nhau một cách nhanh nhất thông qua SMS.">
+        <meta property="og:url" content="http://giacoin24h.com">
+        <meta property="og:image" content="http://giacoin24h.com/img/og-image.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Giá coin 24h là nền tảng cảnh báo sự thay đổi của giá các loại tiền ảo từ nhiều sàn giao dịch khác nhau một cách nhanh nhất thông qua SMS.">
+        <meta name="keywords" content="cryptocurrency trading platform cryptoeconomics research analytics monitoring software">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+        <!-- Google Fonts -->
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lora:400,400italic|Source+Sans+Pro:300|Work+Sans:400,500,600'>
+
+
+        <%= stylesheet_link_tag    'home', media: 'all' %>
+        <%= javascript_include_tag 'home' %>
+        <%= csrf_meta_tags %>
+    </head>
+
+
+    <body data-spy="scroll" data-target="#navbar-menu">
+
+        <!-- Navbar -->
+        <div class="navbar navbar-custom navbar-expand-md sticky fixed-top" role="navigation" id="sticky-nav">
+            <div class="container">
+                <!-- LOGO -->
+                <a class="navbar-brand logo" href="/">
+                  Giá coin 24h
+                </a>
+
+                <!-- Responsive menu button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars"></span>
+                </button>
+
+
+                <!-- menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Navbar right -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard" class="nav-link">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#features" class="nav-link">Coming soon</a>
+                        </li>
+                        <li class="nav-item">
+                          <%= link_to "Login", new_user_session_path, class: "btn btn-white-bordered navbar-btn" %>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--/Menu -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- End navbar-custom -->
+
+        <!-- HOME -->
+        <section class="home bg-img-1" id="home">
+            <div class="bg-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="home-fullscreen">
+                            <div class="full-screen">
+                                <div class="home-wrapper home-wrapper-alt">
+                                    <h1 class="text-white">Adminto is a fully responsive landing page built using the latest Bootstrap framework</h1>
+                                    <h4 class="text-white">Adminto is a fully responsive landing page built using the latest Bootstrap framework. It's designed for describing your app, agency or business. The clean and well commented code allows easy customization of the theme.</h4>
+
+                                    <p class="text-white">Yes, I'm a dummy text. Anyway I look nice and useful</p>
+
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><a href="" title="Microsoft"><img src="images/clients/microsoft_white.png" alt="clients"></a></li>
+                                        <li class="list-inline-item"><a href="" title="Google"><img src="images/clients/google_white.png" alt="clients"></a></li>
+                                    </ul>
+
+                                    <a href="" class="btn btn-custom m-t-20">Buy Template</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END HOME -->
+
+        <!-- Features -->
+        <section class="section" id="features">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                    <p class="text-muted text-uppercase"><b>Contrary to popular</b></p>
+                        <h3 class="title">It's designed for describing your app, agency or business</h3>
+                        <p class="text-muted sub-title">The clean and well commented code allows easy customization of the theme.It's <br/> designed for describing your app, agency or business.</p>
+                    </div>
+                </div> <!-- end row -->
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="features-box">
+                            <i class="fa fa-ioxhost"></i>
+                            <h5 class="mt-2">Responsive Layouts</h5>
+                            <p class="text-muted m-b-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="features-box">
+                            <i class="fa fa-cubes"></i>
+                            <h5 class="mt-2">Bootstrap UI based</h5>
+                            <p class="text-muted m-b-0">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="features-box">
+                            <i class="fa fa-umbrella"></i>
+                            <h5 class="mt-2">Creative Design</h5>
+                            <p class="text-muted m-b-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+
+                </div> <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="features-box">
+                            <i class="fa fa-shirtsinbulk"></i>
+                            <h5 class="mt-2">Strategy Solutions</h5>
+                            <p class="text-muted m-b-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="features-box">
+                            <i class="fa fa-free-code-camp"></i>
+                            <h5 class="mt-2">Digital Design</h5>
+                            <p class="text-muted m-b-0">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="features-box">
+                            <i class="fa fa-language"></i>
+                            <h5 class="mt-2">Analystics Solutions</h5>
+                            <p class="text-muted m-b-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+
+                </div> <!-- end row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end Features -->
+
+
+        <!-- Features Alt -->
+        <section class="section bg-gray">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/macbook.png" alt="img" class="img-fluid">
+                    </div>
+
+                    <div class="col-md-5 offset-md-1">
+                        <div class="feat-description">
+                            <h4>Praesent et viverra massa non varius magna eget nibh vitae velit posuere efficitur.</h4>
+                            <p class="text-muted"><i>The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</i></p>
+
+                            <p class="text-muted">We put a lot of effort in design, as it’s the most important ingredient of successful website.Sed ut perspiciatis unde omnis iste natus error sit.We put a lot of effort in design.</p>
+
+                            <a href="" class="btn btn-custom">Learn More</a>
+                        </div>
+                    </div>
+
+                </div><!-- end row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end features alt -->
+
+        <!-- PRICING -->
+        <section class="section" id="pricing">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3 class="title">Pricing</h3>
+                        <p class="text-muted sub-title">The clean and well commented code allows easy customization of the theme.It's <br> designed for describing your app, agency or business.</p>
+                    </div>
+                </div> <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="row">
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-4 col-md-4">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Ragular</h3>
+                                        <h2 class="plan-price">$24</h2>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="fa fa-check-square-o"></i>Number of end products <b>1</b></li>
+                                        <li> <i class="fa fa-check-square-o"></i>Customer support</li>
+                                        <li> <i class="fa fa-check-square-o"></i>Free Updates</li>
+                                        <li> <i class="fa fa-check-square-o"></i>No Domain</li>
+                                        <li> <i class="fa fa-check-square-o"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-sm btn-custom">Purchase Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-4 col-md-4">
+                                <div class="inner-box active">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Multiple</h3>
+                                        <h2 class="plan-price">$120</h2>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="fa fa-check-square-o"></i>Number of end products <b>1</b></li>
+                                        <li> <i class="fa fa-check-square-o"></i>Customer support</li>
+                                        <li> <i class="fa fa-check-square-o"></i>Free Updates</li>
+                                        <li> <i class="fa fa-check-square-o"></i>5 Domains</li>
+                                        <li> <i class="fa fa-check-square-o"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-sm btn-custom">Purchase Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-4 col-md-4">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Extended</h3>
+                                        <h2 class="plan-price">$999</h2>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="fa fa-check-square-o"></i>Number of end products <b>1</b></li>
+                                        <li> <i class="fa fa-check-square-o"></i>Customer support</li>
+                                        <li> <i class="fa fa-check-square-o"></i>Free Updates</li>
+                                        <li> <i class="fa fa-check-square-o"></i>Unlimited Domains</li>
+                                        <li> <i class="fa fa-check-square-o"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-sm btn-custom">Purchase Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- End Pricing -->
+
+
+        <!-- Get Started -->
+        <section class="section bg-custom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="get-started text-center">
+                            <h2><b>Get Started for FREE</b></h2>
+                            <h4>The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.</h4>
+                            <a href="" class="btn btn-white-bordered">Join for FREE</a>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end Get Started -->
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a class="navbar-brand logo" href="index.html">
+                            Admin<span class="text-custom">to</span>
+                        </a>
+                        <span class="copy-txt">&copy; 2017</span>
+                    </div>
+                    <div class="col-lg-4 offset-lg-2">
+                        <ul class="footer-menu list-inline">
+                            <li class="list-inline-item"><a href="#">How it works</a></li>
+                            <li class="list-inline-item"><a href="#">Features</a></li>
+                            <li class="list-inline-item"><a href="#">Pricing</a></li>
+                            <li class="list-inline-item"><a href="#">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul class="social-icons text-right">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </footer>
+        <!-- End Footer -->
+
+        <script type="text/javascript">
+            $('.owl-testi').owlCarousel({
+                autoPlay: 3000,
+            stopOnHover: true,
+            navigation: false,
+            paginationSpeed: 1000,
+            goToFirstSpeed: 2000,
+            singleItem: true,
+            autoHeight: true,
+            transitionStyle: "fade"
+            })
+        </script>
+
+    </body>
+</html>

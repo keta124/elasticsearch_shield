@@ -1,0 +1,26 @@
+---
+:concurrency: 5
+:pidfile: tmp/pids/sidekiq.pid
+production:
+  :concurrency: 20
+:queues:
+  - default
+  - mailers
+
+:schedule:
+  CrawlerBittrexMarket:
+    every: '15s'
+  CrawlerCoinbaseMarket:
+    every: '15s'
+  CrawlerGdaxMarket:
+    every: '15s'
+  CrawlerHitbtcMarket:
+    every: '15s'
+  CrawlerPoloniexMarket:
+    every: '15s'
+  CrawlerCryptopiaMarket:
+    every: '30s'
+  CrawlerUsdVnd:
+    every: '5m'
+  CrawlerCoinMiningInfo:
+    every: '10m'
